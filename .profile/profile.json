@@ -39,15 +39,15 @@
     "items": [
       {
         "icon": "sports_esports",
-        "label": "I play Minecraft and make mods and resource packs for it."
+        "label": "I play Minecraft and Roblox, and I make Minecraft mods and resource packs."
       },
       {
-        "icon": "brand:roblox",
-        "label": "I also play Roblox."
+        "icon": "code",
+        "label": "I build tools for the web and apps for Android."
       },
       {
-        "icon": "terminal",
-        "label": "I build web tools and Android apps, and I use Arch Linux."
+        "icon": "brand:archlinux",
+        "label": "Arch Linux is my daily driver."
       }
     ]
   },
@@ -85,6 +85,10 @@
           {
             "icon": "brand:python",
             "label": "Python"
+          },
+          {
+            "icon": "brand:lua",
+            "label": "Lua"
           }
         ]
       },
@@ -157,7 +161,7 @@
         "icon": "language",
         "label": "omhackz.top",
         "url": "https://omhackz.top/",
-        "style": "filled"
+        "style": "tonal"
       },
       {
         "icon": "brand:github",
@@ -193,6 +197,12 @@
         "icon": "brand:curseforge",
         "label": "CurseForge",
         "url": "https://www.curseforge.com/members/omhackz/",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:roblox",
+        "label": "Roblox",
+        "url": "https://www.roblox.com/users/7908475131/profile",
         "style": "tonal"
       }
     ]
