@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "login": "OmHackz",
+  "seed": "#FF790F",
+  "seedFromAvatar": false,
+  "scheme": "fidelity",
+  "motion": true,
+  "iconFill": true,
+  "order": [
+    "hero",
+    "socials",
+    "about",
+    "stack",
+    "projects",
+    "stats",
+    "streak",
+    "wave",
+    "buttons"
+  ],
+  "hidden": [
+    "socials",
+    "projects"
+  ],
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "OmHackz",
+    "subtitle": "Web tools, Android apps and a very customized Arch desktop.",
+    "typing": true,
+    "avatarShape": "cookie12",
+    "chips": [
+      {
+        "icon": "code",
+        "label": "Developer & Maker"
+      }
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "items": [
+      {
+        "icon": "sports_esports",
+        "label": "I play Minecraft and make mods and resource packs for it."
+      },
+      {
+        "icon": "brand:roblox",
+        "label": "I also play Roblox."
+      },
+      {
+        "icon": "terminal",
+        "label": "I build web tools and Android apps, and I use Arch Linux."
+      }
+    ]
+  },
+  "stack": {
+    "title": "Tech stack",
+    "groups": [
+      {
+        "title": "Web",
+        "items": [
+          {
+            "icon": "brand:html5",
+            "label": "HTML"
+          },
+          {
+            "icon": "brand:css",
+            "label": "CSS"
+          },
+          {
+            "icon": "brand:javascript",
+            "label": "JavaScript"
+          },
+          {
+            "icon": "brand:typescript",
+            "label": "TypeScript"
+          }
+        ]
+      },
+      {
+        "title": "Apps & scripting",
+        "items": [
+          {
+            "icon": "brand:kotlin",
+            "label": "Kotlin"
+          },
+          {
+            "icon": "brand:python",
+            "label": "Python"
+          }
+        ]
+      },
+      {
+        "title": "OS & tools",
+        "items": [
+          {
+            "icon": "brand:archlinux",
+            "label": "Arch Linux"
+          },
+          {
+            "icon": "brand:visualstudiocode",
+            "label": "VS Code"
+          },
+          {
+            "icon": "brand:git",
+            "label": "Git"
+          },
+          {
+            "icon": "brand:github",
+            "label": "GitHub"
+          },
+          {
+            "icon": "terminal",
+            "label": "Terminal"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "source": "manual",
+    "repos": [],
+    "overrides": {},
+    "empty": "No description yet.",
+    "fork": "Fork"
+  },
+  "stats": {
+    "title": "GitHub activity",
+    "stars": "Stars earned",
+    "contributions": "Yearly contributions",
+    "repos": "Public repos",
+    "followers": "Followers",
+    "calendar": "Last 21 days",
+    "weekdays": "SMTWTFS",
+    "languages": "Languages across my repositories",
+    "showLanguages": true
+  },
+  "streak": {
+    "title": "Streak",
+    "current": "Current streak",
+    "longest": "Longest in past year",
+    "days": "days"
+  },
+  "socials": {
+    "items": [],
+    "variant": "chip",
+    "fill": "tonal",
+    "card": true
+  },
+  "buttons": {
+    "items": [
+      {
+        "icon": "person",
+        "label": "More about me",
+        "url": "./ABOUT.md",
+        "style": "tonal"
+      },
+      {
+        "icon": "language",
+        "label": "omhackz.top",
+        "url": "https://omhackz.top/",
+        "style": "filled"
+      },
+      {
+        "icon": "brand:github",
+        "label": "GitHub",
+        "url": "https://github.com/OmHackz",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:x",
+        "label": "X",
+        "url": "https://x.com/OmHackz",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:youtube",
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@OmHackz",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:discord",
+        "label": "Discord",
+        "url": "https://discord.gg/omhackz",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:modrinth",
+        "label": "Modrinth",
+        "url": "https://modrinth.com/user/OmHackz",
+        "style": "tonal"
+      },
+      {
+        "icon": "brand:curseforge",
+        "label": "CurseForge",
+        "url": "https://www.curseforge.com/members/omhackz/",
+        "style": "tonal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+name: Refresh GitHub profile stats
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 2 * * *'
+  push:
+    paths:
+      - '.profile/profile.json'
+      - '.github/workflows/profile-stats.yml'
+permissions:
+  contents: write
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: metawka/expressive-profile
+          ref: f852b8a36dc83923d374b2bcba03652338000049
+          path: renderer
+          persist-credentials: false
+      - name: Render activity and streak cards
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          # Keep the language legend on one row in both themes.
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          renderer = Path("renderer/action/render.mjs")
+          source = renderer.read_text()
+          selector = "o.showLanguages?e.languages:[]"
+          limited = 'o.showLanguages?e.languages.filter(([name])=>name!=="Java").slice(0,6):[]'
+          if source.count(selector) != 1:
+              raise SystemExit("Language selector missing from pinned renderer")
+          renderer.write_text(source.replace(selector, limited))
+          PYTHON
+          mkdir -p "$RUNNER_TEMP/profile"
+          cp .profile/profile.json "$RUNNER_TEMP/profile/profile.json"
+          (cd "$RUNNER_TEMP/profile" && node "$GITHUB_WORKSPACE/renderer/action/render.mjs")
+          cp "$RUNNER_TEMP/profile/assets/"{stats,streak}-{dark,light}.svg assets/
+      - name: Save updated cards
+        run: |
+          git add assets/{stats,streak}-{dark,light}.svg
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Refresh profile stats and streaks'
+            git push
+          fi
